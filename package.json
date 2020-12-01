@@ -16,7 +16,7 @@
     "prettier": "prettier --check \"**/*.{js,jsx,ts,tsx,md,mdx,html,css,json}\"",
     "server": "env-cmd nodemon server.js",
     "storybook": "cd client && npm run storybook",
-    "start": "env-cmd node server.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
