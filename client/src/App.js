@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div>
-      <OptionalRender show={error}>{error?.message}</OptionalRender>
+      <OptionalRender show={error}>Error: {error?.message}</OptionalRender>
       <h1>This app renders a random cat. You like it?</h1>
       <img src={cat.url} style={{ width: '50%' }} alt="" />
       <button onClick={() => likeCat(cat)}>I like</button>
