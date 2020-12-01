@@ -9,14 +9,14 @@ app.get('*', (req, res, next) => {
   next()
 })
 
-app.get('api/cats/random', (req, res) => {
+app.get('/api/cats/random', (req, res) => {
   axios.get('https://api.thecatapi.com/v1/images/search').then((result) => {
     console.log(result.data)
     res.json(result.data)
   })
 })
 
-app.get('api/cats/breeds', (req, res) => {
+app.get('/api/cats/breeds', (req, res) => {
   axios
     .get('https://api.thecatapi.com/v1/breeds', {
       headers: {

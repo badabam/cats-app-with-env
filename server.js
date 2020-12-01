@@ -5,6 +5,7 @@ const path = require('path')
 
 // Handle React routing, return all requests to React app
 app.use(express.static(path.join(__dirname, 'client/build')))
+
 // Serve any static files
 app.use(
   '/storybook',
