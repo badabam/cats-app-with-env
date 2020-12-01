@@ -5,7 +5,7 @@
   "description": "A demo app with cats",
   "main": "server.js",
   "engines": {
-    "node": ">=14"
+    "node": ">=12"
   },
   "scripts": {
     "postinstall": "cd client && npm install",
