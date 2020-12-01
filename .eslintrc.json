@@ -2,7 +2,7 @@
   "env": {
     "browser": true,
     "commonjs": true,
-    "es6": true,
+    "es2020": true,
     "node": true
   },
   "extends": [
@@ -24,6 +24,7 @@
     }
   },
   "rules": {
+    "react/react-in-jsx-scope": "off",
     "no-unused-vars": [
       "warn",
       { "vars": "all", "args": "after-used", "ignoreRestSiblings": true }

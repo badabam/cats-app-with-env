@@ -1,9 +1,12 @@
 {
-  "name": "cra-with-api",
+  "name": "cats-app-with-env",
   "private": true,
   "version": "1.0.0",
-  "description": "Boilerplate for Create-React-App with an Express.js API",
+  "description": "A demo app with cats",
   "main": "server.js",
+  "engines": {
+    "node": ">=12"
+  },
   "scripts": {
     "postinstall": "cd client && npm install",
     "build": "cd client && npm run build && npm run build-storybook",
@@ -18,18 +21,11 @@
     "storybook": "cd client && npm run storybook",
     "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lmachens/cra-with-api.git"
-  },
   "keywords": [],
-  "author": "Leon Machens",
+  "author": "Jerry Erbs",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/lmachens/cra-with-api/issues"
-  },
-  "homepage": "https://github.com/lmachens/cra-with-api#readme",
   "dependencies": {
+    "@types/jest": "^26.0.16",
     "axios": "^0.21.0",
     "env-cmd": "^10.1.0",
     "express": "^4.17.1"
@@ -62,5 +58,13 @@
   "lint-staged": {
     "*.js": "eslint --cache --fix",
     "*.{js,css,md}": "prettier --write"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/badabam/cats-app-with-env.git"
+  },
+  "bugs": {
+    "url": "https://github.com/badabam/cats-app-with-env/issues"
+  },
+  "homepage": "https://github.com/badabam/cats-app-with-env#readme"
 }
