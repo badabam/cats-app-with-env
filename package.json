@@ -4,6 +4,9 @@
   "version": "1.0.0",
   "description": "A demo app with cats",
   "main": "server.js",
+  "engines": {
+    "node": ">=14"
+  },
   "scripts": {
     "postinstall": "cd client && npm install",
     "build": "cd client && npm run build && npm run build-storybook",
@@ -22,6 +25,7 @@
   "author": "Jerry Erbs",
   "license": "MIT",
   "dependencies": {
+    "@types/jest": "^26.0.16",
     "axios": "^0.21.0",
     "env-cmd": "^10.1.0",
     "express": "^4.17.1"

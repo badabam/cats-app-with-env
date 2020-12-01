@@ -14,21 +14,23 @@ function App() {
     <div>
       <OptionalRender show={error}>Error: {error?.message}</OptionalRender>
       <h1>This app renders a random cat. You like it?</h1>
-      <img src={cat.url} style={{ width: '50%' }} alt="" />
-      <button onClick={() => likeCat(cat)}>I like</button>
-      <button onClick={() => dislikeCat(cat)}>Don&apos;t like it</button>
+      <img src={cat.url} style={{ width: 200 }} alt="" />
+      <div>
+        <button onClick={() => likeCat(cat)}>I like</button>
+        <button onClick={() => dislikeCat(cat)}>Don&apos;t like it</button>
+      </div>
 
       <OptionalRender show={votedCats.liked.length}>
         <h2>Your liked cats:</h2>
         {votedCats.liked.map((url) => (
-          <img key={url} src={url} alt="" />
+          <img key={url} src={url} style={{ width: 200 }} alt="" />
         ))}
       </OptionalRender>
 
       <OptionalRender show={votedCats.disliked.length}>
         <h2>Your disliked cats:</h2>
         {votedCats.disliked.map((url) => (
-          <img key={url} src={url} alt="" />
+          <img key={url} src={url} style={{ width: 200 }} alt="" />
         ))}
       </OptionalRender>
     </div>
