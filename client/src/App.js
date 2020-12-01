@@ -19,7 +19,7 @@ function App() {
   return (
     <div>
       <img src={catImage} alt="" />
-      {error.message}
+      {error?.message}
     </div>
   )
 }
