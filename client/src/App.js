@@ -1,28 +1,27 @@
-import React, { useEffect, useState } from "react";
-import "./App.css";
+import { useEffect, useState } from 'react'
 
 function App() {
-  const [catImage, setCatImage] = useState("");
-  const [error, setError] = useState();
+  const [catImage, setCatImage] = useState('')
+  const [error, setError] = useState()
 
   useEffect(() => {
-    fetch("/api/cats/random")
+    fetch('/api/cats/random')
       .then((res) => res.json())
       .then((data) => setCatImage(data[0].url))
-      .catch(setError);
+      .catch(setError)
 
-    fetch("/cats/random")
+    fetch('/cats/random')
       .then((res) => res.json())
       .then((data) => setCatImage(data[0].url))
-      .catch(setError);
-  }, []);
+      .catch(setError)
+  }, [])
 
   return (
-    <div className="App">
+    <div>
       <img src={catImage} alt="" />
-      {JSON.stringify(error)}
+      {error.message}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

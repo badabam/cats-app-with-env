@@ -2,8 +2,7 @@
   "name": "cats-app-with-env",
   "private": true,
   "version": "1.0.0",
-  "proxy": "http://localhost:3001",
-  "description": "Boilerplate for Create-React-App with an Express.js API",
+  "description": "A demo app with cats",
   "main": "server.js",
   "scripts": {
     "postinstall": "cd client && npm install",
