@@ -4,6 +4,11 @@ const axios = require("axios");
 const app = express();
 const apiKey = process.env.API_KEY;
 
+app.get("*", (req, res, next) => {
+  res.setHeader("Cache-Control", "s-maxage=1, stale-while-revalidate");
+  next();
+});
+
 app.get("/cats/random", (req, res) => {
   axios.get("https://api.thecatapi.com/v1/images/search").then((result) => {
     console.log(result.data);
