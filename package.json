@@ -14,9 +14,9 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "client": "cd client && npm start",
     "prettier": "prettier --check \"**/*.{js,jsx,ts,tsx,md,mdx,html,css,json}\"",
-    "server": "nodemon server.js",
+    "server": "env-cmd nodemon server.js",
     "storybook": "cd client && npm run storybook",
-    "start": "node server.js"
+    "start": "env-cmd node server.js"
   },
   "repository": {
     "type": "git",
@@ -30,6 +30,8 @@
   },
   "homepage": "https://github.com/lmachens/cra-with-api#readme",
   "dependencies": {
+    "axios": "^0.21.0",
+    "env-cmd": "^10.1.0",
     "express": "^4.17.1"
   },
   "devDependencies": {
