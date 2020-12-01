@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
-import Page from "./pages/Page";
 
 function App() {
+  const [catImage, setCatImage] = useState("");
+
+  useEffect(() => {
+    fetch("/cats/random")
+      .then((res) => res.json())
+      .then((data) => setCatImage(data[0].url));
+  }, []);
+
   return (
     <div className="App">
-      <Page
-        onLogin={() => console.log("login")}
-        onLogout={() => console.log("logout")}
-        onCreateAccount={() => console.log("create account")}
-      />
-      <a href="/storybook">To Storybook</a>
+      <img src={catImage} alt="" />
     </div>
   );
 }
