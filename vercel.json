@@ -1,3 +1,7 @@
 {
-  "rewrites": [{ "source": "/api/(.*)", "destination": "/api" }]
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api" },
+    { "source": "/storybook", "destination": "/client/storybook-static" },
+    { "source": "/(.*)", "destination": "/client/build/" }
+  ]
 }

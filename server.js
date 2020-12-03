@@ -1,8 +1,8 @@
 const app = require('./api/index')
-const port = process.env.PORT || 3001
 const express = require('express')
 const path = require('path')
 
+const port = process.env.PORT || 3001
 // Handle React routing, return all requests to React app
 app.use(express.static(path.join(__dirname, 'client/build')))
 
