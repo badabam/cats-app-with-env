@@ -1,4 +1,5 @@
 import useCats from '../hooks/useCats'
+import Button from './Button'
 import OptionalRender from './OptionalRender'
 
 function App() {
@@ -10,8 +11,8 @@ function App() {
       <h1>This app renders a random cat. You like it?</h1>
       <img src={cat.url} style={{ width: 200 }} alt="" />
       <div>
-        <button onClick={likeCat}>Like</button>
-        <button onClick={dislikeCat}>Dislike</button>
+        <Button onClick={likeCat}>Like</Button>
+        <Button onClick={dislikeCat}>Dislike</Button>
       </div>
 
       <OptionalRender show={votedCats.liked.length}>
