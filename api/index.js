@@ -1,5 +1,6 @@
-const express = require('express')
 const axios = require('axios')
+const express = require('express')
+const path = require('path')
 
 const app = express()
 const apiKey = process.env.API_KEY
@@ -48,6 +49,19 @@ app.get('/api/cats/breeds', (req, res) => {
       res.json(result.data)
     })
     .catch(sendAxiosError(res))
+})
+
+// Handle React routing, return all requests to React app
+app.use(express.static(path.join(__dirname, 'client/build')))
+
+// Serve any static files
+app.use(
+  '/storybook',
+  express.static(path.join(__dirname, 'client/storybook-static'))
+)
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client/build', 'index.html'))
 })
 
 module.exports = app
