@@ -2,6 +2,7 @@
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api" },
     { "source": "/storybook", "destination": "/client/storybook-static" },
+    { "source": "/public", "destination": "/client/build" },
     { "source": "/(.*)", "destination": "/client/build/" }
   ]
 }
