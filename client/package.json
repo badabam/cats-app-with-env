@@ -14,12 +14,16 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-is": "^17.0.1",
-    "react-scripts": "4.0.1"
+    "react-scripts": "^4.0.1",
+    "styled-components": "^5.2.1"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
-    "@testing-library/user-event": "^12.2.2"
+    "@testing-library/user-event": "^12.2.2",
+    "@types/jest": "^26.0.16",
+    "@types/styled-components": "^5.1.4",
+    "jest-styled-components": "^7.0.3"
   },
   "scripts": {
     "start": "react-scripts start",
